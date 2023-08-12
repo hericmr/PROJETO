@@ -8,7 +8,9 @@ class Poema(models.Model):
     autor = models.CharField(max_length=100)
     exceto = models.TextField(null=True, blank=True)
     conteudo = models.TextField()
+    image = models.ImageField(upload_to='', null=True, blank=True)
     data_publicacao = models.DateTimeField(auto_now_add=True)
+
 
     def get_absolute_url(self):
         return reverse('poema_detalhe', kwargs={'pk': self.pk})

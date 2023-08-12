@@ -2,6 +2,7 @@
 {% block conteudo %}
       <div class="container">
         <h2 class="card-title">{{ poem.titulo }}</h2>
+        <img src="{{ poem.image.url }}" width="1050px" alt="">
         <h3 class="card-subtitle mb-2 text-muted">{{ poem.autor }}</h3>
         <p>{{ poem.conteudo | linebreaks }}</p>
         <small>{{ poema.data_publicacao }}</small>

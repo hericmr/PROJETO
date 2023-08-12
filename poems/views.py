@@ -6,16 +6,18 @@ from . import views
 # Create your views here.
 def home(request):
     poems = Poema.objects.all()
-    context = {'poems': poems}
-    return render(request, 'home.html', {'poems': poems})
+    context = {'poems': poems, 'title': 'Poemas Héric'}
+    return render(request, 'home.html', context)
 
 def sobre(request):
-    return render(request, 'sobre.html')
+    return render(request, 'sobre.html', {'title': 'Sobre Héric'})
+
 
 def poema_detalhe(request, pk):
     poema = get_object_or_404(Poema, id=pk)
-    context = {'poem': poema}  # Corrigido de 'contexto' para 'context'
+    context = {'poem': poema, 'title': poema.titulo} 
     return render(request, 'poema_detalhe.html', context)
+
     
 from django.shortcuts import render
 
