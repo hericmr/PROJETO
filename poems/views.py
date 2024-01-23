@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-
 from .models import Poema
 from . import views
+
 # Create your views here.
 def home(request):
     poems = Poema.objects.all()
@@ -11,6 +11,9 @@ def home(request):
 
 def sobre(request):
     return render(request, 'sobre.html', {'title': 'Sobre Héric'})
+
+def index(request):
+    return render(request, 'index.html', {'title': 'Index'})
 
 
 def poema_detalhe(request, pk):

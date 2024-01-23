@@ -1,10 +1,31 @@
 {% extends 'base.html' %}
 {% block conteudo %}
       <div class="container">
-        <h2 class="card-title">{{ poem.titulo }}</h2>
-        <img src="{{ poem.image.url }}" width="1050px" alt="">
+        <h9 class="card-title">{{ poem.titulo }}</h9>
+        <br>
+        <small class="data">{{ poem.data_publicacao }}</small>
         <h3 class="card-subtitle mb-2 text-muted">{{ poem.autor }}</h3>
-        <p>{{ poem.conteudo | linebreaks }}</p>
+        <p>{{ poem.conteudo | safe }}</p>
         <small>{{ poema.data_publicacao }}</small>
       </div>
+
+
+      <style>
+        /* Estilo para o título h9 */
+        h9 {
+          font-size: 52px; /* Tamanho da fonte */
+          text-align: center; /* Centralizar o texto */
+          margin-top: 30px; /* Espaçamento superior */
+        }
+
+        /* Media Query para telas menores */
+@media (max-width: 768px) {
+  .custom-title {
+    font-size: 28px; /* Tamanho da fonte para telas menores */
+    margin-top: 15px; /* Espaçamento superior menor */
+  }
+}
+</style>
+
+      </style>
 {% endblock conteudo %}

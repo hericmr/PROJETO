@@ -1,29 +1,24 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-      <div class="jumbotron text-center bg-secondary text-white">
-        <h1 class="display-5">Héric Moura</h1>
-        <p class="lead">Poemas, programas, desenhos e memória</p>
-      </div>
-      
-      <div class="container">
-        <div class="row">
-        
+
+<div class="container">
+  <div class="row">
+
                 {% for poem in poems %}
           <div class="col m-2">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">{{ poem.titulo }}</h5>
+                <h1 class="card-title">{{ poem.titulo }}</h1>
+                <h6 class="card-subtitle mb-2 text-muted">{{ poem.autor }}</h6>
                 {% if poem.image %}
                   <img src="{{ poem.image.url }}" width="250px" alt="">
                 {% endif %}
                 <br>
                 <br>
-                <h6 class="card-subtitle mb-2 text-muted">{{ poem.autor }}</h6>
-                <p class="card-text">{{ poem.exceto | linebreaks  }}</p>
                 <small class="data">{{ poem.data_publicacao }}</small>
                 <br>
-                <a href="{{ poem.get_absolute_url }}" class="card-link">Ler</a>
-              </div>            
+                <a href="{{ poem.get_absolute_url }}" class="card-link">Ler notícia</a>
+              </div>
             </div>
           </div>
           {% endfor %}

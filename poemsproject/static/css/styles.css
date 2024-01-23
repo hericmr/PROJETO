@@ -1,0 +1,44 @@
+/* Estilos gerais para o container */
+.container {
+    max-width: 800px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  
+  /* Estilos para o título do card */
+  .card-title {
+    font-size: 36px; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+  
+  /* Estilos para a data de publicação */
+  .data {
+    font-size: 14px; /* Tamanho da fonte menor */
+    color: #999; /* Cor do texto cinza */
+    display: block; /* Quebra de linha após a data */
+    margin-bottom: 15px; /* Espaçamento inferior */
+  }
+  
+  /* Estilos para o autor */
+  .card-subtitle {
+    font-size: 20px; /* Tamanho da fonte menor */
+    color: #888; /* Cor do texto mais clara */
+    margin-top: 5px; /* Espaçamento superior */
+    margin-bottom: 20px; /* Espaçamento inferior */
+  }
+  
+  /* Estilos para o conteúdo do poema */
+  p {
+    font-size: 18px; /* Tamanho da fonte para o conteúdo */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin-bottom: 20px; /* Espaçamento inferior */
+  }
+  
+  /* Estilos para a data de publicação do poema */
+  .small {
+    font-size: 12px; /* Tamanho de fonte menor */
+    color: #999; /* Cor do texto cinza */
+    display: block; /* Quebra de linha após a data */
+  }
+  
